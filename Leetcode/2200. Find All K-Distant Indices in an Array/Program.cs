@@ -7,7 +7,7 @@ public class Program
         var result = new List<int>();
         var keyIndices = new List<int>();
 
-        // 1. Находим все индексы, где nums[j] == key
+        
         for (int j = 0; j < nums.Length; j++)
         {
             if (nums[j] == key)
@@ -16,7 +16,7 @@ public class Program
             }
         }
 
-        // 2. Для каждого индекса i проверяем, есть ли j, такой что |i - j| <= k
+        
         for (int i = 0; i < nums.Length; i++)
         {
             foreach (int j in keyIndices)
@@ -24,12 +24,12 @@ public class Program
                 if (Math.Abs(i - j) <= k)
                 {
                     result.Add(i);
-                    break; // Достаточно одного совпадения
+                    break; 
                 }
             }
         }
 
-        // 3. Ответ уже отсортирован, так как мы перебираем i по порядку
+        
         return result;
     }
 }
